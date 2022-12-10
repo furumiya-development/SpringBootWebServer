@@ -2,9 +2,9 @@
 
 ## 1. 開発環境  
 ```
-統合開発環境：Eclipse 2022-09 R(4.25.0) Pleiades + Spring Tool Suite プラグイン 4.16.1
-言語：Java 17  
-デベロッパーSDK：Oracle JDK 17.0.5  
+統合開発環境：Eclipse 2022-12 R(4.26.0) Pleiades + Spring Tool Suite プラグイン 4.17.0
+プログラム言語：Java 17  
+開発SDK：Oracle JDK 17.0.5  
 フレームワーク：Spring Boot 3.0.0  
 -Spring Framework 6.0.2  
 -サーブレットエンジン：Apache Tomcat ${tomcatVersion}  
@@ -22,13 +22,12 @@ CSSテンプレート：Bootstrap 5.2.3
 <br />
 
 ### 改良移行中。
-※Spring Security 6.0で非推奨となったクラスライブラリのコンフィグ系を推奨クラスに移行。
-ログインユーザーをデータベースから検索し比較するメソッドとテスト用のインメモリーにユーザーを持って比較するプログラム追加。
-Form認証とBasic認証兼用させMVCのブラウザ向けとWebAPIのデスクトップアプリ、将来のスマホ、タブレットアプリ向けでアクセスできるよう兼用させる。
-ビルドツールをMavenからGradle(Groovy)に移行。
-O/RマッピングをJava Persistence APIからJakarta Persistence APIに移行
-設定ファイルをプロパティファイルからymlファイルに移行。
-データベースが変わっても設定ファイルを切り替えるだけで別のデータソースへ切り替わるよう編集。
+1. Spring Security 6.0で非推奨となったクラスライブラリのコンフィグ系を推奨クラスに移行。  
+2. ログインユーザーをデータベースから検索し比較するメソッドとテスト用のインメモリーにユーザーを持って比較するプログラム追加。  
+3. ビルドツールをMavenからGradle(Groovy)に移行。  
+4. O/RマッピングをJava Persistence APIからJakarta Persistence APIに移行  
+5. 設定ファイルをプロパティファイルからymlファイルに移行。  
+データリソース用のデータベースが変わっても設定ファイルを切り替えるだけで別のデータソースへ切り替わるようyml編集。  
 
 <br />
 
@@ -61,16 +60,7 @@ SpringJpaの機能および設定によりテーブルが無ければ作成し�
 
 <br />
 
-## 3. [Herokuサービスで確認](https://polarbear-leaning02.herokuapp.com/)
-ユーザー名：user、パスワード：pass2user  
-※無料版で作成していますのでDynosがスリープから復帰起動するため表示に時間がかかります。   
-起動後、30分以内に何も操作しなければ再びスリープに入ります。  
-スリープに入り再起動するとアプリも編集データも初期化されます。  
-※Herokuの無料版のPostgreSQLは2022/05/29現在バージョンは14です。  
-
-<br />
-
-## 4. 実行イメージ  
+## 3. 実行イメージ  
 #### 画面・イメージ／一覧  
 ![Img](ReadmeImg.png)  
 
